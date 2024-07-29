@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - a=${a}
+      - b=${b}
+      - c=${c}
+      - d=${d}
+      - e=${e}
+      - f=${f}
+      - g=${g}
+    env_file:
+      - .env
+    volumes:
+      - .:/app
